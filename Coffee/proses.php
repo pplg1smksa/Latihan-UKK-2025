@@ -27,6 +27,7 @@ $_SESSION['tmpCoffeeName'] = $coffeeName;
 $_SESSION['tmpCoffeeType'] = $coffeeType;
 $_SESSION['tmpCoffeePrice'] = $coffeePrice;
 
+// Check kembali data di session
 // var_dump($_SESSION['tmpCoffeeName']);
 // var_dump($_SESSION['tmpCoffeeType']);
 // var_dump($_SESSION['tmpCoffeePrice']);
