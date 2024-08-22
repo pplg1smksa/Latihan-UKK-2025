@@ -31,6 +31,7 @@ $_SESSION['tmpCoffeePrice'] = $coffeePrice;
 // var_dump($_SESSION['tmpCoffeeType']);
 // var_dump($_SESSION['tmpCoffeePrice']);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,11 +39,12 @@ $_SESSION['tmpCoffeePrice'] = $coffeePrice;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabel.css">
     <title>COFFEE MAENG</title>
 </head>
 <body>
     <h2>Daftar Pesanan</h2>
-    <table border="1px" cellpadding="5px">
+    <table>
         <tr>
             <th>Nama Kopi</th>
             <th>Tipe Kopi</th>
@@ -58,5 +60,6 @@ $_SESSION['tmpCoffeePrice'] = $coffeePrice;
         <?php $a++;
         endwhile; ?>
     </table>
+    <a href="index.php">Kembali</a>
 </body>
 </html>
