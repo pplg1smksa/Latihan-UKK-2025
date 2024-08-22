@@ -48,13 +48,15 @@ $_SESSION['tmpCoffeePrice'] = $coffeePrice;
             <th>Tipe Kopi</th>
             <th>Harga Kopi</th>
         </tr>
-        <?php for ($i=0; $i < count($coffeeName) ; $i++) : ?>
+        <?php $a = 0;
+        while ($a < count($coffeeName)) : ?>
         <tr>
-            <td><?= $coffeeName[$i]; ?></td>
-            <td><?= $coffeeType[$i]; ?></td>
-            <td><?= $coffeePrice[$i]; ?></td>
+            <td><?= $coffeeName[$a]; ?></td>
+            <td><?= $coffeeType[$a]; ?></td>
+            <td><?= $coffeePrice[$a]; ?></td>
         </tr>
-        <?php endfor; ?>
+        <?php $a++;
+        endwhile; ?>
     </table>
 </body>
 </html>
