@@ -10,7 +10,7 @@
     <h1>Martabak Guacor</h1>
 
     <div class="container">
-        <form action="tabel.css" method="get">
+        <form action="proses.php" method="get">
             <label for="">Varian Martabak Manis</label><br>
             <input type="checkbox" name="varianMartabakManis[]" value="Coklat">
             <label for="varianCoklat">Coklat</label><br>
@@ -34,6 +34,8 @@
 
             <label for="hargaMartabak">Harga</label>
             <input type="number" id="hargaMartabak" name="hargaMartabak" min="25000" step="2500"><br>
+
+            <button type="submit">Pesan</button>
         </form>
     </div>
 </body>
