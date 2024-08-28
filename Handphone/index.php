@@ -12,9 +12,9 @@
         <form action="data.php" method="get">
 
         <label for="merkHandphone">Merk Handphone</label>
-        <input type="text" name="merkHandphone" id="modelHandphone" required>
+        <input type="text" name="merkHandphone" id="modelHandphone" required><br>
         <label for="modelHandphone">model Handphone</label>
-        <input type="text" name="modelHandphone" id="modelHandphone" required>
+        <input type="text" name="modelHandphone" id="modelHandphone" required><br>
 
         <label for="ram">RAM</label>
         <select name="ram" id="ram">
@@ -36,9 +36,8 @@
         </select><br>
 
         <label for="harga">Harga</label><br>
+        <input type="number" name="harga" id="harga">
         <button type="submit">Pesan</button>
-
-
 
         </form>
     </div>
