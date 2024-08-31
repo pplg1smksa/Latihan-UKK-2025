@@ -43,15 +43,6 @@ $_SESSION['tmpHarga'] = $harga;
 // var_dump($_SESSION['tmpStorage']);
 // var_dump($_SESSION['tmpHarga']);
 
-
-// var_dump($merkHandphone);
-// var_dump($modelHandphone);
-// var_dump($ram);
-// var_dump($storage);
-// var_dump($harga);
-
-
-
 ?>
 
 <!DOCTYPE html>
