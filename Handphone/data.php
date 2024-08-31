@@ -1,5 +1,23 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['tmpMerkHandphone'])) {
+    $merkHandphone = $_SESSION['tmpMerkHandphone'] ;
+}
+if (isset($_SESSION['tmpModelHandphone'])) {
+    $modelHandphone = $_SESSION['tmpModelHandphone'] ;
+}
+if (isset($_SESSION['tmpRam'])) {
+    $ram = $_SESSION['tmpRam'] ;
+}
+if (isset($_SESSION['tmpStorage'])) {
+    $storage = $_SESSION['tmpStorage'] ;
+}
+if (isset($_SESSION['tmpHarga'])) {
+    $harga = $_SESSION['tmpHarga'] ;
+}
+
 $merkHandphone[] = $_GET['merkHandphone'];
 $modelHandphone[] = $_GET['modelHandphone'];
 $ram[] = $_GET['ram'];
@@ -25,28 +43,6 @@ $_SESSION['tmpHarga'] = $harga;
 // var_dump($_SESSION['tmpStorage']);
 // var_dump($_SESSION['tmpHarga']);
 
-if (isset($_SESSION['tmpMerHandphone'])) {
-    $merkHandphone = $_SESSION['tmpMerHandphone'] ;
-}
-if (isset($_SESSION['tmpModelHandphone'])) {
-    $modelHandphone = $_SESSION['tmpModelHandphone'] ;
-}
-if (isset($_SESSION['tmpRam'])) {
-    $ram = $_SESSION['tmpRam'] ;
-}
-if (isset($_SESSION['tmpStorage'])) {
-    $storage = $_SESSION['tmpStorage'] ;
-}
-if (isset($_SESSION['tmpHarga'])) {
-    $harga = $_SESSION['tmpHarga'] ;
-}
-
-// var_dump($merkHandphone);
-// var_dump($modelHandphone);
-// var_dump($ram);
-// var_dump($storage);
-// var_dump($harga);
-
 ?>
 
 <!DOCTYPE html>
@@ -55,10 +51,11 @@ if (isset($_SESSION['tmpHarga'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="data.css">
     <title>Data Pesanan</title>
 </head>
 <body>
-    <h1>Data Pesanana</h1>
+    <h1>Data Pesanan</h1>
     <table>
         <tr>
             <th>No.</th>
@@ -81,5 +78,6 @@ if (isset($_SESSION['tmpHarga'])) {
         <?php $num++;
         endwhile; ?>
     </table>
+    <a href="index.php">Tambah Data</a>
 </body>
 </html>
