@@ -58,7 +58,7 @@ if (isset($_SESSION['tmpHarga'])) {
     <title>Data Pesanan</title>
 </head>
 <body>
-    <h1>Data Pesanana</h1>
+    <h1>Data Pesanan</h1>
     <table>
         <tr>
             <th>No.</th>
