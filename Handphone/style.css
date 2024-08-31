@@ -3,15 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
 }
+
 h1 {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 50px 0;
 }
+
 .container {
     border: 2px solid black;
     border-radius: 5px;
@@ -19,24 +22,28 @@ h1 {
     max-width: 800px;
     padding: 1em;
     margin: 0 auto;
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 label {
     display: flexbox;
     margin-bottom: 5px;
 }
-input [type="text"],
-input [type="number"] {
+
+input[type="text"],
+input[type="number"] {
     padding: 7px;
-    width: 100px;
+    width: 100%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 select {
-    margin-block-end: 5px;
+    margin-right: 5px;
 }
-button [type="submit"] {
+
+button[type="submit"] {
     background-color: yellow;
     width: 100%;
     padding: 10px;
@@ -45,6 +52,19 @@ button [type="submit"] {
     cursor: pointer;
     margin-top: 10px;
 }
-button [type="submit"]:hover {
+
+button[type="submit"]:hover {
     background-color: gold;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 30%;
+    }
 }
