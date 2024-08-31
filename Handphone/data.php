@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $merkHandphone[] = $_GET['merkHandphone'];
 $modelHandphone[] = $_GET['modelHandphone'];
 $ram[] = $_GET['ram'];
