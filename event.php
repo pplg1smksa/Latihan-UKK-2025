@@ -12,10 +12,11 @@ $categories = ['PHBI', 'Olahraga dan Seni', 'Umum'];
     <title>Tambah Event</title>
 </head>
 <body>
-    <form action="">
-        <label for="eventKode">Kode Event: </label>
-        <input type="text" name="eventKode">
+    <form action="table.php" method="post">
+        <label for="eventCode">Kode Event: </label>
+        <input type="text" name="eventCode">
         <label for="eventName">Name Event: </label>
+        <input type="text" name="eventName">
         <label for="categories">Kategory</label>
         <select name="categories" id="">
             <option value="" disabled selected>Pilih Kategori</option>

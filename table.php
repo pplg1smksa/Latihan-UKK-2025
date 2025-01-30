@@ -1,3 +1,45 @@
+<?php 
+
+session_start();
+
+if (isset($_SESSION['tmpEventCode'])) {
+    $eventCode = $_SESSION['tmpEventCode'];
+}
+if (isset($_SESSION['tmpEventName'])) {
+    $eventName = $_SESSION['tmpEventName'];
+}
+if (isset($_SESSION['tmpCategories'])) {
+    $categories = $_SESSION['tmpCategories'];
+}
+if (isset($_SESSION['tmpDate'])) {
+    $date = $_SESSION['tmpDate'];
+}
+if (isset($_SESSION['tmpOrganizer'])) {
+    $organizer = $_SESSION['tmpOrganizer'];
+}
+
+$eventCode[] = $_POST['eventCode'];
+$eventName[] = $_POST['eventName'];
+$categories[] = $_POST['categories'];
+$date[] = $_POST['date'];
+$organizer[] = $_POST['organizer'];
+
+// var_dump($eventCode);
+// var_dump($eventName);
+// var_dump($categories);
+// var_dump($date);
+// var_dump($organizer);
+
+$_SESSION['tmpEventCode'] = $eventCode;
+$_SESSION['tmpEventName'] = $eventName;
+$_SESSION['tmpCategories'] = $categories;
+$_SESSION['tmpDate'] = $date;
+$_SESSION['tmpOrganizer'] = $organizer;
+
+// session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,27 +57,17 @@
             <th>Tanggal</th>
             <th>Penyelenggara</th>
         </tr>
+        <?php for ($i=0; $i < count($eventCode); $i++) : ?>
         <tr>
-            <td>123</td>
-            <td>Olahraga dan Seni</td>
-            <td>Badminton</td>
-            <td>22 Januari 2025</td>
-            <td>SMK Muhammadiyah 1 Cikampek</td>
+            <td><?= $eventCode[$i] ?></td>
+            <td><?= $eventName[$i] ?></td>
+            <td><?= $categories[$i] ?></td>
+            <td><?= $date[$i] ?></td>
+            <td><?= $organizer[$i] ?></td>
         </tr>
-        <tr>
-            <td>123</td>
-            <td>Olahraga dan Seni</td>
-            <td>Badminton</td>
-            <td>22 Januari 2025</td>
-            <td>SMK Muhammadiyah 1 Cikampek</td>
-        </tr>
-        <tr>
-            <td>123</td>
-            <td>Olahraga dan Seni</td>
-            <td>Badminton</td>
-            <td>22 Januari 2025</td>
-            <td>SMK Muhammadiyah 1 Cikampek</td>
-        </tr>
+        <?php endfor ?>
     </table>
+    <a href="event.php">Kembali</a>
+    <a href="index.php">Log Out</a>
 </body>
 </html>
