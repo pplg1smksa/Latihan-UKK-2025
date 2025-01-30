@@ -24,8 +24,8 @@
         <label for="tanggalEvent">Tanggal Event: </label>
         <input type="date" name="tanggalEvent"><br>
         <label for="penyelenggara">Penyelenggara: </label>
-        <input type="text" name="penyelenggara">
-
+        <input type="text" name="penyelenggara"><br>
+        <button type="submit">Simpan</button>
     </form>
 </body>
 </html>
