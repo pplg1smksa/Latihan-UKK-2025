@@ -1,18 +1,18 @@
 <?php 
 
 $user = 'Admin';
-$pass = 'admin1234';
+$pass = 'Admin1234';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if(!empty($_POST['username'])) {
+    if(!empty($username)) {
         if($username == $user && $password == $pass) {
-            header('Location: event.php');
+            header('Location: input.php');
         } else {
-            ?>
+            ?> 
                 <script>
-                    alert('Username/Password Salah');
+                    alert('Username/Password Salah!')
                 </script>
             <?php
         }
@@ -20,22 +20,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Login Page</title>
 </head>
 <body>
-    <form action="" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username">
+    <form action="" method="POST">
+        <label for="username">Username: </label>
+        <input type="text" name="username"><br>
         <label for="password">Password: </label>
-        <input type="password" name="password" id="">
-        <button type="submit">Sign In</button>
+        <input type="password" name="password"><br>
+        <button type="submit">Masuk</button>
     </form>
 </body>
 </html>
